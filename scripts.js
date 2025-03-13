@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
       ];
 
-      const artistGrind = document.querySelector ('.artists-grid')
-      const albumsGrind = document.querySelector ('.albums-grid')
+      const artistGrid = document.querySelector('.artists-grid')
+      const albumsGrid = document.querySelector('.albums-grid')
 
       artistsData.forEach ( artist => {
         const artistCard = document.createElement('div')
@@ -28,12 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         artistCard.innerHTML = `
             <img src=${artist.image} "alt=image do ${artist.name}">
+            <div>
             <h3>${artist.name}</h3>
             <p>artista</p>
+            </div>
         
         `
 
-        artistGrind.appendChild(artistCard)
+        artistGrid.appendChild(artistCard)
     })
 
       albumsData.forEach ( album=> {
@@ -42,11 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         albumCard.innerHTML = `
             <img src=${album.image} "alt=image do ${album.name}">
-            <p>${album.name}</p>
+            <div>
+            <h3>${album.name}</h3>
+            <p>${album.artist}</p>
+            </div>
         
         `
 
-        albumsGrind.appendChild(albumCard)
+        albumsGrid.appendChild(albumCard)
 
       })
 })
