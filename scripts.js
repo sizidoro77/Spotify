@@ -27,33 +27,32 @@ document.addEventListener('DOMContentLoaded', () => {
         artistCard.classList.add('artist-card')
 
         artistCard.innerHTML = `
-            <img src=${artist.image} "alt=image do ${artist.name}">
+            <img src="${artist.image}" alt="image do ${artist.name}">
             <div>
-            <h3>${artist.name}</h3>
-            <p>artista</p>
+              <h3>${artist.name}</h3>
+              <p>artista</p>
             </div>
-        
         `
 
         artistGrid.appendChild(artistCard)
     })
 
-      albumsData.forEach ( album=> {
+      albumsData.forEach ( album => {
         const albumCard = document.createElement('div')
         albumCard.classList.add('album-card')
 
         albumCard.innerHTML = `
             <img src=${album.image} "alt=image do ${album.name}">
             <div>
-            <h3>${album.name}</h3>
-            <p>${album.artist}</p>
+              <h3>${album.name}</h3>
+              <p>${album.artist}</p>
             </div>
         
         `
 
         albumsGrid.appendChild(albumCard)
 
-      })
+    })
 })
 
 

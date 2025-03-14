@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #000;
     color: white;
 }
 
@@ -21,6 +21,7 @@ body {
     width: 300px;
     background-color: #121212;
     padding: 10px;
+    padding-bottom: 90px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -36,21 +37,22 @@ body {
     gap: 10px;
 }
 
-.nav-library i, .nav-library p {
+.nav-library i, .nav-library p{
     font-size: 14px;
     color: #B7B3B6;
     cursor: pointer;
+
 }
 
-.nav-playlist, .nav-podcast {
+.nav-playlist,.nav-podcast {
     background-color: #242424;
     padding: 16px;
     border-radius: 8px;
 }
 
-.nav-playlist button, .nav-podcast button {
+.nav-playlist button,.nav-podcast button {
     background-color: #fff;
-    color: black;
+    color: #000;
     border: none;
     padding: 6px 10px;
     margin-top: 16px;
@@ -59,10 +61,19 @@ body {
     border-radius: 20px;
 }
 
+.nav-playlist p,.nav-podcast p {
+    font-size: 12px;
+}
+
+.nav-footer{
+    margin-top: auto;
+}
+
 .nav-footer a {
     color: #a7a7a7;
     text-decoration: none;
     font-size: 12px;
+    margin-right: 12px;
     margin-right: 12px;
     margin-bottom: 8px;
 }
@@ -72,6 +83,7 @@ body {
     border: 1px solid #fff;
     color: #fff;
     padding: 8px 12px;
+    margin-top: 16px;
     cursor: pointer;
     border-radius: 20px;
 }
@@ -79,25 +91,21 @@ body {
 main {
     padding: 24px;
     flex-grow: 1;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
 }
 
-header {
+.search-bar {
     display: flex;
     align-items: center;
     background-color: #242424;
     padding: 8px 16px;
     border-radius: 20px;
     width: 300px;
-    margin-bottom: 20px;
+
 }
 
-header input {
+.search-bar input {
     background-color: transparent;
-    border: none;
-    color: #fff;
+    border: #fff;
     width: 100%;
     margin-left: 10px;
     outline: none;
@@ -116,7 +124,7 @@ header input {
     border-radius: 8px;
     text-align: center;
     cursor: pointer;
-    transition: backgroun-color 0.3s;
+    transition: background-color 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -138,6 +146,11 @@ header input {
     color: #B7B3B6;
 }
 
+.artist-card p, .album-card p {
+    font-size: 10px;
+    color: #B7B3B6;
+}
+
 .content {
     margin-top: 40px;
 
@@ -151,9 +164,9 @@ header input {
 .banner {
     position: fixed;
     bottom: 0;
-    right: 0;
     left: 0;
-    background: linear-gradient( #AF2896, #509BF5);
+    right: 0;
+    background: linear-gradient(#AF2896, #509BF5);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,5 +186,25 @@ header input {
     color: #000;
     border: none;
     padding: 12px 20px;
+    cursor: pointer;
 }
 
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+header input {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    margin-left: 10px;
+    outline: none;
+}
