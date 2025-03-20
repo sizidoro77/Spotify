@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `
 
+
         artistGrid.appendChild(artistCard)
 
       })

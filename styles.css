@@ -28,6 +28,41 @@ body {
     gap: 35px;
 }
 
+.artist-card play-button, .album-card play-button{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #1db954;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, tranform 0.3s ease;
+}
+
+.artist-card play-button i , .album-card play-button i {
+    color: #000;
+    font-size: 16px;
+}
+
+/* Animação de entrada e saída do botão */
+.artist-card:hover .play-button,
+.album-card:hover .play-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efeito de clique no card */
+.artist-card:active .play-button,
+.album-card:active .play-button {
+    transform: scale(0.9);
+}
+
 .nav-logo i{
     font-size: 24px;
 }
