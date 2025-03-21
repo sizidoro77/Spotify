@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const artistGrid = document.querySelector('.artists-grid')
       const albumsGrid = document.querySelector('.albums-grid')
+      
 
       artistsData.forEach( artist => {
         const artistCard = document.createElement('div')
@@ -33,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>artista</p>
             </div>
         `
-
 
         artistGrid.appendChild(artistCard)
 
@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>${album.artist}</p>
             </div>
         `
-
         albumsGrid.appendChild(albumCard)
 
     })
